@@ -1,7 +1,8 @@
-openapi: 3.0.0
-info:
-  title: API fuer das Leistungssystem REO
-  version: '1.0.0-SNAPSHOT'
+"openapi": 3.0.0,
+"title": "API fuer das Leistungssystem REO",
+"version": "1.0.0-SNAPSHOT",
+
+  info:
 servers:
   - url: http://localhost:8443/rest/intern
 security:
@@ -41,7 +42,8 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Person'
-components:
+      title:
+      components:
   securitySchemes:
     basicAuth:
       type: http

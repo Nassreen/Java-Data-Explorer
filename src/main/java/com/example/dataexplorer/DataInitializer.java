@@ -1,7 +1,6 @@
 package com.example.dataexplorer;
-
-import jakarta.annotation.PostConstruct;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -12,34 +11,18 @@ import java.util.List;
 @Component
 public class DataInitializer {
 //    private final PersonController personController;
+private static final Logger logger = LoggerFactory.getLogger(DataInitializer.class);
+
     public List<Person> getExampleData() {
+        logger.info("Fetching example data");
+        List<Person> exampleData = createExampleData();
+        logger.info("Example data fetched successfully");
+        return exampleData;
+    }
+    public List<Person> createExampleDataList() {
       List<Person> exampleData = createExampleData();
      return exampleData;
  }
-//    private List<Person> exampleData;
-//    @Autowired
-//    public DataInitializer(PersonController personController) {
-//        this.personController = personController;
-//    }
-//
-//   @Autowired
-//    public DataInitializer() {
-//    this.exampleData = createExampleData();
-//}
-//
-//    public List<Person> getExampleData() {
-//        return exampleData;
-//    }
-//    @PostConstruct
-//    public void initData() {
-//        List<Person> exampleData = createExampleData();
-//        personController.setExampleData(exampleData);
-//    }
-
-
-//    public List<Person> getExampleData() {
-//        return exampleData;
-//    }
 
     private List<Person> createExampleData() {
         List<Person> exampleData = new ArrayList<>();
