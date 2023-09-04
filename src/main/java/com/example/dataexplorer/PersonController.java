@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/rest/intern")
-//@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:3000")
 @Api(tags = "personen", description = "Endpoints for managing persons, including search and retrieval")
 public class PersonController {
     private static final Logger logger = LoggerFactory.getLogger(PersonController.class);

@@ -14,9 +14,6 @@ public class Kommunikationsadresse {
         return email;
     }
 
-    public String getTelefon() {
-        return telefon;
-    }
 
     // Setter methods
     public void setId(Long id) {
